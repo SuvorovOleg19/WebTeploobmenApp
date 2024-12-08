@@ -1,27 +1,24 @@
-﻿@{
+﻿@model List<Variant>
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-start">
-    <form action="/home/calc" method="post">
-        <div class="mb-3">
-            <label for="num1" class="form-label">Операнд 1</label>
-            <input type="text" name="model.num1" class="form-control" id="num1">
-        </div>
-        <div class="mb-3">
-            <label for="num2" class="form-label">Операнд 2</label>
-            <input type="text" name="model.num2" class="form-control" id="num2">
-        </div>
+<table class="table table-hover">
+    <tr>
+        <th>Операнд 1</th>
+        <th>Операнд 2</th>
+        <th>Операция</th>
+        <th>Действия</th>
+    </tr>
+    @foreach(var item in Model)
+    {
+        <tr>
+            <td>@item.Num1</td>
+            <td>@item.Num2</td>
+            <td>@item.OperationType</td>
+            <td></td>
+        </tr>
+    }
+</table>
 
-        <div class="mb-3">
-            <label class="form-label">Тип операции</label>
-            <select name="model.operationType" class="form-control">
-                <option value="1">Сложение</option>
-                <option value="2">Вычитание</option>
-                <option value="3">Умножение</option>
-                <option value="4">Деление</option>
-            </select>
-        </div>
-        <button class="btn btn-primary">Рассчитать</button>
-    </form>
-</div>
+

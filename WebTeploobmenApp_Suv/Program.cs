@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using WebTeploobmenApp_Suv.Data;
+
 namespace WebTeploobmenApp_Suv
 {
     public class Program
@@ -8,6 +11,8 @@ namespace WebTeploobmenApp_Suv
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddDbContext<TeploobmenContext>(o => o.UseSqlite("Data Source=Teploobmen.db;"));
 
             var app = builder.Build();
 

@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using WebTeploobmenApp_Suv.Data;
 using WebTeploobmenApp_Suv.Models;
 
 namespace WebTeploobmenApp_Suv.Controllers
@@ -8,15 +9,28 @@ namespace WebTeploobmenApp_Suv.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        private readonly TeploobmenContext _context;
+
+        public HomeController(ILogger<HomeController> logger, TeploobmenContext context)
         {
             _logger = logger;
+            _context = context;
         }
 
         public IActionResult Index()
         {
-            return View();
+            var variants = _context.Variants.ToList();
+
+
+            return View(variants);
         }
+        [HttpGet]
+        public IActionResult Calc()
+        {
+            return View(new HomeCalcViewModel());
+        }
+
+            [HttpPost]
         public IActionResult Calc(CalcModel model)
         {
             var result = model.OperationType switch
@@ -39,6 +53,14 @@ namespace WebTeploobmenApp_Suv.Controllers
                 Num2 = model.Num2,
                 OperationType = model.OperationType
             };
+
+            _context.Variants.Add(new Variant
+            {
+                Num1 = model.Num1,
+                Num2 = model.Num2,
+                OperationType = model.OperationType
+            });
+            _context.SaveChanges();
                 
             //ViewData["result"] = result;
 
