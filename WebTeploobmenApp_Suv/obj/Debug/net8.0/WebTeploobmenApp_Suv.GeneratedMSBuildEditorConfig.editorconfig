@@ -26,6 +26,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\79536\source\repos\WebTeploobmenApp_Suv\WebTeploobmenApp_Suv
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/79536/source/repos/WebTeploobmenApp_Suv/WebTeploobmenApp_Suv/Views/Home/Calc.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYWxjLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/79536/source/repos/WebTeploobmenApp_Suv/WebTeploobmenApp_Suv/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
