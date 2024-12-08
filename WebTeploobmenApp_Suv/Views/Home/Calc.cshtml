@@ -1,7 +1,12 @@
-﻿@{
+﻿@model HomeCalcViewModel
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
-    Результат расчета: @ViewData["result"]
+    Операнд 1: @Model.Num1<br />
+    Операнд 2: @Model.Num2<br />
+    Тип операции: @Model.OperationTypeName<br />
+
+    Результат расчета: @Model.Result
 </div>

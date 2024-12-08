@@ -6,16 +6,16 @@
     <form action="/home/calc" method="post">
         <div class="mb-3">
             <label for="num1" class="form-label">Операнд 1</label>
-            <input type="text" name="num1" class="form-control" id="num1">
+            <input type="text" name="model.num1" class="form-control" id="num1">
         </div>
         <div class="mb-3">
             <label for="num2" class="form-label">Операнд 2</label>
-            <input type="text" name="num2" class="form-control" id="num2">
+            <input type="text" name="model.num2" class="form-control" id="num2">
         </div>
 
         <div class="mb-3">
-            <label for="operationType" class="form-label">Тип операции</label>
-            <select name="operationType" class="form-control">
+            <label class="form-label">Тип операции</label>
+            <select name="model.operationType" class="form-control">
                 <option value="1">Сложение</option>
                 <option value="2">Вычитание</option>
                 <option value="3">Умножение</option>

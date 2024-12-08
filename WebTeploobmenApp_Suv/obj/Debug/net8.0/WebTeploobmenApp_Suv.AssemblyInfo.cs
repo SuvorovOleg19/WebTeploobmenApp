@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WebTeploobmenApp_Suv")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c49664206af232f7de6cb81dd452d9ccbba278a9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d7baa1f55e0e440667bb12d0433d0d441040a066")]
 [assembly: System.Reflection.AssemblyProductAttribute("WebTeploobmenApp_Suv")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebTeploobmenApp_Suv")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

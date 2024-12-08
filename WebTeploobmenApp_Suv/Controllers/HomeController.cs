@@ -17,26 +17,33 @@ namespace WebTeploobmenApp_Suv.Controllers
         {
             return View();
         }
-        public IActionResult Calc(int num1, int num2, int operationType)
+        public IActionResult Calc(CalcModel model)
         {
-            var result = operationType switch
+            var result = model.OperationType switch
             {
-                1 => num1 + num2,
+                1 => model.Num1 + model.Num2,
 
-                2 => num1 - num2,
+                2 => model.Num1 - model.Num2,
 
-                3 => num1 * num2,
+                3 => model.Num1 * model.Num2,
 
-                4 => num1 / num2,
+                4 => model.Num1 / model.Num2,
 
                 _ => throw new Exception()
             };
-                
-                
-                
-            ViewData["result"] = result;
 
-            return View();
+            var viewModel = new HomeCalcViewModel()
+            {
+                Result = result,
+                Num1 = model.Num1,
+                Num2 = model.Num2,
+                OperationType = model.OperationType
+            };
+                
+            //ViewData["result"] = result;
+
+
+            return View(viewModel);
         }
         public IActionResult Privacy()
         {
