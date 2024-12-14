@@ -3,6 +3,8 @@
     ViewData["Title"] = "Home Page";
 }
 
+<a href="/home/calc/" class="btn btn-primary">Новый расчет</a>
+
 <table class="table table-hover">
     <tr>
         <th>Операнд 1</th>
@@ -15,8 +17,10 @@
         <tr>
             <td>@item.Num1</td>
             <td>@item.Num2</td>
-            <td>@item.OperationType</td>
-            <td></td>
+            <td>@HomeCalcViewModel.OperationTypes[item.OperationType]</td>
+            <td>
+                <a href="/home/calc/@item.Id">Открыть</a> <a href="/home/delete/@item.Id">Удалить</a>
+            </td>
         </tr>
     }
 </table>

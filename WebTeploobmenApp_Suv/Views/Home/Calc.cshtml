@@ -3,33 +3,36 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    Операнд 1: @Model.Num1<br />
-    Операнд 2: @Model.Num2<br />
-    Тип операции: @Model.OperationTypeName<br />
+@if(Model.Result != null)
+{
+    <div class="text-start" mb-3>
+        <b>Операнд 1:</b> @Model.Num1<br />
+        <b>Операнд 2</b>: @Model.Num2<br />
+        <b>Тип операции:</b> @Model.OperationTypeName<br />
 
-    Результат расчета: @Model.Result
-</div>
+        <b>Результат расчета:</b> @Model.Result
+    </div>
+}
 
 
 <div class="text-start">
     <form action="/home/calc" method="post">
         <div class="mb-3">
             <label for="num1" class="form-label">Операнд 1</label>
-            <input type="text" name="model.num1" class="form-control" id="num1">
+            <input type="text" name="model.num1" class="form-control" id="num1" value="@Model.Num1">
         </div>
         <div class="mb-3">
             <label for="num2" class="form-label">Операнд 2</label>
-            <input type="text" name="model.num2" class="form-control" id="num2">
+            <input type="text" name="model.num2" class="form-control" id="num2" value="@Model.Num2">
         </div>
 
         <div class="mb-3">
             <label class="form-label">Тип операции</label>
             <select name="model.operationType" class="form-control">
-                <option value="1">Сложение</option>
-                <option value="2">Вычитание</option>
-                <option value="3">Умножение</option>
-                <option value="4">Деление</option>
+                @foreach (var item in HomeCalcViewModel.OperationTypes)
+                {
+                    <option value="@item.Key" selected="@(Model.OperationType == item.Key)">@item.Value</option>
+                }
             </select>
         </div>
         <button class="btn btn-primary">Рассчитать</button>

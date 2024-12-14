@@ -24,10 +24,35 @@ namespace WebTeploobmenApp_Suv.Controllers
 
             return View(variants);
         }
+
         [HttpGet]
-        public IActionResult Calc()
+        public IActionResult Delete(int id)
         {
-            return View(new HomeCalcViewModel());
+            var variant = _context.Variants.FirstOrDefault(x => x.Id == id);
+            if(variant != null)
+            {
+                _context.Variants.Remove(variant);
+                _context.SaveChanges();
+            }
+
+            return RedirectToAction("Index");
+
+        }
+
+        [HttpGet]
+        public IActionResult Calc(int id)
+        {
+            var variant = _context.Variants.FirstOrDefault(x => x.Id == id);
+            var viewModel = new HomeCalcViewModel();
+
+            if (variant != null)
+            {
+                viewModel.Num1 = variant.Num1;
+                viewModel.Num2 = variant.Num2;
+                viewModel.OperationType = variant.OperationType;
+            } 
+
+            return View(viewModel);
         }
 
             [HttpPost]
