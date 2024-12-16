@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using WebTeploobmenApp_Suv.Data;
 
@@ -14,6 +15,11 @@ namespace WebTeploobmenApp_Suv
 
             builder.Services.AddDbContext<TeploobmenContext>(o => o.UseSqlite("Data Source=Teploobmen.db;"));
 
+            builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(options => options.LoginPath = "/auth");
+
+            builder.Services.AddAuthorization();
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -25,6 +31,7 @@ namespace WebTeploobmenApp_Suv
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.MapControllerRoute(
