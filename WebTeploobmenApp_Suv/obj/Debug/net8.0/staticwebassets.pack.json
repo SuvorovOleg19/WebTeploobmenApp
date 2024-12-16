@@ -5,12 +5,24 @@
       "PackagePath": "staticwebassets\\WebTeploobmenApp_Suv.m1wbvume5n.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\79536\\source\\repos\\WebTeploobmenApp_Suv\\WebTeploobmenApp_Suv\\wwwroot\\css\\c3.min.css",
+      "PackagePath": "staticwebassets\\css\\c3.min.css"
+    },
+    {
       "Id": "C:\\Users\\79536\\source\\repos\\WebTeploobmenApp_Suv\\WebTeploobmenApp_Suv\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
       "Id": "C:\\Users\\79536\\source\\repos\\WebTeploobmenApp_Suv\\WebTeploobmenApp_Suv\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\79536\\source\\repos\\WebTeploobmenApp_Suv\\WebTeploobmenApp_Suv\\wwwroot\\js\\c3.min.js",
+      "PackagePath": "staticwebassets\\js\\c3.min.js"
+    },
+    {
+      "Id": "C:\\Users\\79536\\source\\repos\\WebTeploobmenApp_Suv\\WebTeploobmenApp_Suv\\wwwroot\\js\\d3-5.8.2.min.js",
+      "PackagePath": "staticwebassets\\js\\d3-5.8.2.min.js"
     },
     {
       "Id": "C:\\Users\\79536\\source\\repos\\WebTeploobmenApp_Suv\\WebTeploobmenApp_Suv\\wwwroot\\js\\site.js",

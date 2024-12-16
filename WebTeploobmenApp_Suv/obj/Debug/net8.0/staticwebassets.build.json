@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "RkdvSWtzPlWAS5tymr5FRq0hEIM7lSX9KqbYjaWeVI8=",
+  "Hash": "8t2/4srHIXZT0kcdpKnaEzlLQ7zBPZPQ8XYaFE5/cI4=",
   "Source": "WebTeploobmenApp_Suv",
   "BasePath": "_content/WebTeploobmenApp_Suv",
   "Mode": "Default",
@@ -59,6 +59,27 @@
       "OriginalItemSpec": "C:\\Users\\79536\\source\\repos\\WebTeploobmenApp_Suv\\WebTeploobmenApp_Suv\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\WebTeploobmenApp_Suv.bundle.scp.css"
     },
     {
+      "Identity": "C:\\Users\\79536\\source\\repos\\WebTeploobmenApp_Suv\\WebTeploobmenApp_Suv\\wwwroot\\css\\c3.min.css",
+      "SourceId": "WebTeploobmenApp_Suv",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\79536\\source\\repos\\WebTeploobmenApp_Suv\\WebTeploobmenApp_Suv\\wwwroot\\",
+      "BasePath": "_content/WebTeploobmenApp_Suv",
+      "RelativePath": "css/c3.min#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "e3nc8kb3t9",
+      "Integrity": "6keM3+sDUFwuiB+tXRq/HV8tqQYlvarrsoWkx53dSgY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\c3.min.css"
+    },
+    {
       "Identity": "C:\\Users\\79536\\source\\repos\\WebTeploobmenApp_Suv\\WebTeploobmenApp_Suv\\wwwroot\\css\\site.css",
       "SourceId": "WebTeploobmenApp_Suv",
       "SourceType": "Discovered",
@@ -99,6 +120,48 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\79536\\source\\repos\\WebTeploobmenApp_Suv\\WebTeploobmenApp_Suv\\wwwroot\\js\\c3.min.js",
+      "SourceId": "WebTeploobmenApp_Suv",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\79536\\source\\repos\\WebTeploobmenApp_Suv\\WebTeploobmenApp_Suv\\wwwroot\\",
+      "BasePath": "_content/WebTeploobmenApp_Suv",
+      "RelativePath": "js/c3.min#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "mweq1ynqw4",
+      "Integrity": "Ctn8uFcyfBPCy165ci4srHXMT5W6RhLDeWYWOneAsGw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\c3.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\79536\\source\\repos\\WebTeploobmenApp_Suv\\WebTeploobmenApp_Suv\\wwwroot\\js\\d3-5.8.2.min.js",
+      "SourceId": "WebTeploobmenApp_Suv",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\79536\\source\\repos\\WebTeploobmenApp_Suv\\WebTeploobmenApp_Suv\\wwwroot\\",
+      "BasePath": "_content/WebTeploobmenApp_Suv",
+      "RelativePath": "js/d3-5.8.2.min#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "i723g65jmx",
+      "Integrity": "7iWwSiWbKeFqYxc0rnqLCBp3iq1se6JS3hwCPDPWGdA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\d3-5.8.2.min.js"
     },
     {
       "Identity": "C:\\Users\\79536\\source\\repos\\WebTeploobmenApp_Suv\\WebTeploobmenApp_Suv\\wwwroot\\js\\site.js",
@@ -1321,6 +1384,88 @@
   ],
   "Endpoints": [
     {
+      "Route": "css/c3.min.css",
+      "AssetFile": "C:\\Users\\79536\\source\\repos\\WebTeploobmenApp_Suv\\WebTeploobmenApp_Suv\\wwwroot\\css\\c3.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2444"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6keM3+sDUFwuiB+tXRq/HV8tqQYlvarrsoWkx53dSgY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 16 Dec 2024 17:37:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-6keM3+sDUFwuiB+tXRq/HV8tqQYlvarrsoWkx53dSgY="
+        }
+      ]
+    },
+    {
+      "Route": "css/c3.min.e3nc8kb3t9.css",
+      "AssetFile": "C:\\Users\\79536\\source\\repos\\WebTeploobmenApp_Suv\\WebTeploobmenApp_Suv\\wwwroot\\css\\c3.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2444"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6keM3+sDUFwuiB+tXRq/HV8tqQYlvarrsoWkx53dSgY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 16 Dec 2024 17:37:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "e3nc8kb3t9"
+        },
+        {
+          "Name": "label",
+          "Value": "css/c3.min.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-6keM3+sDUFwuiB+tXRq/HV8tqQYlvarrsoWkx53dSgY="
+        }
+      ]
+    },
+    {
       "Route": "css/site.c2tiyv64ts.css",
       "AssetFile": "C:\\Users\\79536\\source\\repos\\WebTeploobmenApp_Suv\\WebTeploobmenApp_Suv\\wwwroot\\css\\site.css",
       "Selectors": [],
@@ -1481,6 +1626,170 @@
         {
           "Name": "integrity",
           "Value": "sha256-Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="
+        }
+      ]
+    },
+    {
+      "Route": "js/c3.min.js",
+      "AssetFile": "C:\\Users\\79536\\source\\repos\\WebTeploobmenApp_Suv\\WebTeploobmenApp_Suv\\wwwroot\\js\\c3.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "207705"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Ctn8uFcyfBPCy165ci4srHXMT5W6RhLDeWYWOneAsGw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 16 Dec 2024 17:37:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Ctn8uFcyfBPCy165ci4srHXMT5W6RhLDeWYWOneAsGw="
+        }
+      ]
+    },
+    {
+      "Route": "js/c3.min.mweq1ynqw4.js",
+      "AssetFile": "C:\\Users\\79536\\source\\repos\\WebTeploobmenApp_Suv\\WebTeploobmenApp_Suv\\wwwroot\\js\\c3.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "207705"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Ctn8uFcyfBPCy165ci4srHXMT5W6RhLDeWYWOneAsGw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 16 Dec 2024 17:37:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "mweq1ynqw4"
+        },
+        {
+          "Name": "label",
+          "Value": "js/c3.min.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Ctn8uFcyfBPCy165ci4srHXMT5W6RhLDeWYWOneAsGw="
+        }
+      ]
+    },
+    {
+      "Route": "js/d3-5.8.2.min.i723g65jmx.js",
+      "AssetFile": "C:\\Users\\79536\\source\\repos\\WebTeploobmenApp_Suv\\WebTeploobmenApp_Suv\\wwwroot\\js\\d3-5.8.2.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "241977"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7iWwSiWbKeFqYxc0rnqLCBp3iq1se6JS3hwCPDPWGdA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 16 Dec 2024 17:37:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "i723g65jmx"
+        },
+        {
+          "Name": "label",
+          "Value": "js/d3-5.8.2.min.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-7iWwSiWbKeFqYxc0rnqLCBp3iq1se6JS3hwCPDPWGdA="
+        }
+      ]
+    },
+    {
+      "Route": "js/d3-5.8.2.min.js",
+      "AssetFile": "C:\\Users\\79536\\source\\repos\\WebTeploobmenApp_Suv\\WebTeploobmenApp_Suv\\wwwroot\\js\\d3-5.8.2.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "241977"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7iWwSiWbKeFqYxc0rnqLCBp3iq1se6JS3hwCPDPWGdA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 16 Dec 2024 17:37:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-7iWwSiWbKeFqYxc0rnqLCBp3iq1se6JS3hwCPDPWGdA="
         }
       ]
     },

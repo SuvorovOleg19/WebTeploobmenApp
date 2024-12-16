@@ -262,3 +262,4 @@ C:\Users\79536\source\repos\WebTeploobmenApp_Suv\WebTeploobmenApp_Suv\bin\Debug\
 C:\Users\79536\source\repos\WebTeploobmenApp_Suv\WebTeploobmenApp_Suv\obj\Debug\net8.0\staticwebassets.build.endpoints.json
 C:\Users\79536\source\repos\WebTeploobmenApp_Suv\WebTeploobmenApp_Suv\obj\Debug\net8.0\staticwebassets\msbuild.WebTeploobmenApp_Suv.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
 C:\Users\79536\source\repos\WebTeploobmenApp_Suv\WebTeploobmenApp_Suv\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\79536\source\repos\WebTeploobmenApp_Suv\WebTeploobmenApp_Suv\obj\Debug\net8.0\WebTeploobmenApp_Suv.sourcelink.json

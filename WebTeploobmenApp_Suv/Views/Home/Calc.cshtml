@@ -4,8 +4,6 @@
 }
 
 
-
-
 <div class="text-start">
     <form action="/home/calc" method="post">
         <div class="mb-3">
@@ -101,21 +99,28 @@
                 </tr>
             </tbody>
         </table>
+
+            <div id="chart"></div>
+            <script>
+                    var tempMaterial = @Json.Serialize(Model.TempMaterial);
+                    var tempGas = @Json.Serialize(Model.TempGas);
+
+                    tempMaterial.unshift('Температура материала, °C')
+                    tempGas.unshift('Температура газа, °C')
+
+                    var chart = c3.generate({
+                    bindto: '#chart',
+                    data: {
+                      columns: [
+                  tempMaterial,
+              tempGas
+                      ]
+                    }
+                });
+            </script>
+
     </div>
-
-
-    @*     <div class="text-start" mb-3>
-        <b>Высота слоя, м</b> @Model.Height<br />
-        <b>Диаметр окатышей, м</b>: @Model.Diameter_of_pellets<br />
-        <b>Начальная температура окатышей, °С</b> @Model.Temp_pellets<br />
-        <b>Начальная температура воздуха, °С</b> @Model.Temp_air<br />
-        <b>Скорость воздуха на свободное сечение шахты, м/с</b> @Model.Speed_air<br />
-        <b>Средняя теплоемкость воздуха при 200 °С, кДж/(кг • К)</b> @Model.Avg_heat_capacity<br />
-        <b>Расход окатышей, кг/с</b> @Model.Consumption_of_pellets<br />
-        <b>Теплоемкость окатышей, кДж/(кг • К)</b> @Model.Heat_capacity_of_pellets<br />
-        <b>Диаметр аппарата, м</b> @Model.Diameter<br />
-        <b>Объемный коэффициент теплоотдачи, Вт/(м3 • К)</b> @Model.Volumetric_heat_transfer_coefficient<br />
-
-        <b>Результат расчета:</b> @Model.Result
-    </div> *@
 }
+
+
+

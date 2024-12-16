@@ -18,31 +18,8 @@ namespace WebTeploobmenApp_Suv.Models
         public double? Diameter { get; set; }
         public double? Volumetric_heat_transfer_coefficient { get; set; }
 
-        //public string OperationTypeName
-        //{
-        //    get
-        //    {
-        //        if (OperationTypes.TryGetValue(OperationType, out string? value)) return OperationTypes[OperationType];
+        public List<double> TempMaterial { get; set; } = [ 260, 200, 150, 120, 100 ];
+        public List<double> TempGas { get; set; } = [ 100, 120, 150, 190, 250 ];
 
-        //        return "";
-        //    }
-        //}
-            
-        //    => OperationType switch
-        //{
-        //    1 => "Сложение",
-        //    2 => "Вычитание",
-        //    3 => "Умножение",
-        //    4 => "Деление",
-        //    _ => "" 
-        //};
-
-        //public static Dictionary<int, string> OperationTypes = new()
-        //{
-        //    [1] = "Сложение",
-        //    [2] = "Вычитание",
-        //    [3] = "Умножение",
-        //    [4] = "Деление"
-        //};
     }
 }
