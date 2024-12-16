@@ -16,9 +16,16 @@ namespace WebTeploobmenApp_Suv.Migrations
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Num1 = table.Column<int>(type: "INTEGER", nullable: false),
-                    Num2 = table.Column<int>(type: "INTEGER", nullable: false),
-                    OperationType = table.Column<int>(type: "INTEGER", nullable: false)
+                    Height = table.Column<double>(type: "REAL", nullable: false),
+                    Diameter_of_pellets = table.Column<double>(type: "REAL", nullable: false),
+                    Temp_pellets = table.Column<double>(type: "REAL", nullable: false),
+                    Temp_air = table.Column<double>(type: "REAL", nullable: false),
+                    Speed_air = table.Column<double>(type: "REAL", nullable: false),
+                    Avg_heat_capacity = table.Column<double>(type: "REAL", nullable: false),
+                    Consumption_of_pellets = table.Column<double>(type: "REAL", nullable: false),
+                    Heat_capacity_of_pellets = table.Column<double>(type: "REAL", nullable: false),
+                    Diameter = table.Column<double>(type: "REAL", nullable: false),
+                    Volumetric_heat_transfer_coefficient = table.Column<double>(type: "REAL", nullable: false)
                 },
                 constraints: table =>
                 {

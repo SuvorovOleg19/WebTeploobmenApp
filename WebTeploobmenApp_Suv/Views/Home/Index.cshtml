@@ -7,17 +7,31 @@
 
 <table class="table table-hover">
     <tr>
-        <th>Операнд 1</th>
-        <th>Операнд 2</th>
-        <th>Операция</th>
-        <th>Действия</th>
+        <th>Высота слоя, м</th>
+        <th>Диаметр окатышей, м</th>
+        <th>Начальная температура окатышей, °С</th>
+        <th>Начальная температура воздуха, °С</th>
+        <th>Скорость воздуха на свободное сечение шахты, м/с</th>
+        <th>Средняя теплоемкость воздуха при 200 °С, кДж/(кг • К)</th>
+        <th>Расход окатышей, кг/с</th>
+        <th>Теплоемкость окатышей, кДж/(кг • К)</th>
+        <th>Диаметр аппарата, м</th>
+        <th>Объемный коэффициент теплоотдачи, Вт/(м3 • К)</th>
     </tr>
     @foreach(var item in Model)
     {
         <tr>
-            <td>@item.Num1</td>
-            <td>@item.Num2</td>
-            <td>@HomeCalcViewModel.OperationTypes[item.OperationType]</td>
+            <td>@item.Height</td>
+            <td>@item.Diameter_of_pellets</td>
+            <td>@item.Temp_pellets</td>
+            <td>@item.Temp_air</td>
+            <td>@item.Speed_air</td>
+            <td>@item.Avg_heat_capacity</td>
+            <td>@item.Consumption_of_pellets</td>
+            <td>@item.Heat_capacity_of_pellets</td>
+            <td>@item.Diameter</td>
+            <td>@item.Volumetric_heat_transfer_coefficient</td>
+            @* <td>@HomeCalcViewModel.OperationTypes[item.OperationType]</td> *@
             <td>
                 <a href="/home/calc/@item.Id">Открыть</a> <a href="/home/delete/@item.Id">Удалить</a>
             </td>

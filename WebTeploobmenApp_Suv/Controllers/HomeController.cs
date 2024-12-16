@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using System.Security.Cryptography.Xml;
 using WebTeploobmenApp_Suv.Data;
 using WebTeploobmenApp_Suv.Models;
 
@@ -47,43 +48,73 @@ namespace WebTeploobmenApp_Suv.Controllers
 
             if (variant != null)
             {
-                viewModel.Num1 = variant.Num1;
-                viewModel.Num2 = variant.Num2;
-                viewModel.OperationType = variant.OperationType;
+                viewModel.Height = variant.Height;
+                viewModel.Diameter_of_pellets = variant.Diameter_of_pellets;
+                viewModel.Temp_pellets = variant.Temp_pellets;
+                viewModel.Temp_air = variant.Temp_air;
+                viewModel.Speed_air = variant.Speed_air;
+                viewModel.Avg_heat_capacity = variant.Avg_heat_capacity;
+                viewModel.Consumption_of_pellets = variant.Consumption_of_pellets;
+                viewModel.Heat_capacity_of_pellets = variant.Heat_capacity_of_pellets;
+                viewModel.Diameter = variant.Diameter;
+                viewModel.Volumetric_heat_transfer_coefficient = variant.Volumetric_heat_transfer_coefficient;
             } 
 
             return View(viewModel);
         }
 
-            [HttpPost]
+        [HttpPost]
         public IActionResult Calc(CalcModel model)
         {
-            var result = model.OperationType switch
-            {
-                1 => model.Num1 + model.Num2,
+            var result = model.CalcResult();
 
-                2 => model.Num1 - model.Num2,
 
-                3 => model.Num1 * model.Num2,
+            //var result = model.OperationType switch
+            //{
+            //    1 => model.Num1 + model.Num2,
 
-                4 => model.Num1 / model.Num2,
+            //    2 => model.Num1 - model.Num2,
 
-                _ => throw new Exception()
-            };
+            //    3 => model.Num1 * model.Num2,
+
+            //    4 => model.Num1 / model.Num2,
+
+            //    _ => throw new Exception()
+            //};
 
             var viewModel = new HomeCalcViewModel()
             {
+
                 Result = result,
-                Num1 = model.Num1,
-                Num2 = model.Num2,
-                OperationType = model.OperationType
+                Height = model.Height,
+                Diameter_of_pellets = model.Diameter_of_pellets,
+                Temp_pellets = model.Temp_pellets,
+                Temp_air = model.Temp_air,
+                Speed_air = model.Speed_air,
+                Avg_heat_capacity = model.Avg_heat_capacity,
+                Consumption_of_pellets = model.Consumption_of_pellets,
+                Heat_capacity_of_pellets = model.Heat_capacity_of_pellets,
+                Diameter = model.Diameter,
+                Volumetric_heat_transfer_coefficient = model.Volumetric_heat_transfer_coefficient,
+
+                //OperationType = model.OperationType
             };
 
             _context.Variants.Add(new Variant
             {
-                Num1 = model.Num1,
-                Num2 = model.Num2,
-                OperationType = model.OperationType
+
+                //Result = result,
+                Height = model.Height,
+                Diameter_of_pellets = model.Diameter_of_pellets,
+                Temp_pellets = model.Temp_pellets,
+                Temp_air = model.Temp_air,
+                Speed_air = model.Speed_air,
+                Avg_heat_capacity = model.Avg_heat_capacity,
+                Consumption_of_pellets = model.Consumption_of_pellets,
+                Heat_capacity_of_pellets = model.Heat_capacity_of_pellets,
+                Diameter = model.Diameter,
+                Volumetric_heat_transfer_coefficient = model.Volumetric_heat_transfer_coefficient,
+                //OperationType = model.OperationType
             });
             _context.SaveChanges();
                 

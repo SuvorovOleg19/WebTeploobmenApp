@@ -3,30 +3,54 @@
     ViewData["Title"] = "Home Page";
 }
 
-@if(Model.Result != null)
-{
-    <div class="text-start" mb-3>
-        <b>Операнд 1:</b> @Model.Num1<br />
-        <b>Операнд 2</b>: @Model.Num2<br />
-        <b>Тип операции:</b> @Model.OperationTypeName<br />
 
-        <b>Результат расчета:</b> @Model.Result
-    </div>
-}
 
 
 <div class="text-start">
     <form action="/home/calc" method="post">
         <div class="mb-3">
-            <label for="num1" class="form-label">Операнд 1</label>
-            <input type="text" name="model.num1" class="form-control" id="num1" value="@Model.Num1">
+            <label for="height" class="form-label">Высота слоя, м</label>
+            <input type="text" name="model.height" class="form-control" id="height" value="@Model.Height">
         </div>
         <div class="mb-3">
-            <label for="num2" class="form-label">Операнд 2</label>
-            <input type="text" name="model.num2" class="form-control" id="num2" value="@Model.Num2">
+            <label for="diameter_of_pellets" class="form-label">Диаметр окатышей, м</label>
+            <input type="text" name="model.diameter_of_pellets" class="form-control" id="diameter_of_pellets" value="@Model.Diameter_of_pellets">
+        </div>
+        <div class="mb-3">
+            <label for="temp_pellets" class="form-label">Начальная температура окатышей, °С</label>
+            <input type="text" name="model.temp_pellets" class="form-control" id="temp_pellets" value="@Model.Temp_pellets">
+        </div>
+        <div class="mb-3">
+            <label for="temp_air" class="form-label">Начальная температура воздуха, °С</label>
+            <input type="text" name="model.temp_air" class="form-control" id="temp_air" value="@Model.Temp_air">
+        </div>
+        <div class="mb-3">
+            <label for="speed_air" class="form-label">Скорость воздуха на свободное сечение шахты, м/с</label>
+            <input type="text" name="model.speed_air" class="form-control" id="speed_air" value="@Model.Speed_air">
+        </div>
+        <div class="mb-3">
+            <label for="avg_heat_capacity" class="form-label">Средняя теплоемкость воздуха при 200 °С, кДж/(кг • К)</label>
+            <input type="text" name="model.avg_heat_capacity" class="form-control" id="avg_heat_capacity" value="@Model.Avg_heat_capacity">
+        </div>
+                <div class="mb-3">
+            <label for="consumption_of_pellets" class="form-label">Расход окатышей, кг/с</label>
+            <input type="text" name="model.Consumption_of_pellets" class="form-control" id="Consumption_of_pellets" value="@Model.Consumption_of_pellets">
+        </div>
+        <div class="mb-3">
+            <label for="heat_capacity_of_pellets" class="form-label">Теплоемкость окатышей, кДж/(кг • К)</label>
+            <input type="text" name="model.Heat_capacity_of_pellets" class="form-control" id="Heat_capacity_of_pellets" value="@Model.Heat_capacity_of_pellets">
+        </div>
+        <div class="mb-3">
+            <label for="diameter" class="form-label">Диаметр аппарата, м</label>
+            <input type="text" name="model.diameter" class="form-control" id="diameter" value="@Model.Diameter">
+        </div>
+        <div class="mb-3">
+            <label for="volumetric_heat_transfer_coefficient" class="form-label">Объемный коэффициент теплоотдачи, Вт/(м3 • К)</label>
+            <input type="text" name="model.volumetric_heat_transfer_coefficient" class="form-control" id="volumetric_heat_transfer_coefficient" value="@Model.Volumetric_heat_transfer_coefficient">
         </div>
 
-        <div class="mb-3">
+
+@*         <div class="mb-3">
             <label class="form-label">Тип операции</label>
             <select name="model.operationType" class="form-control">
                 @foreach (var item in HomeCalcViewModel.OperationTypes)
@@ -34,7 +58,64 @@
                     <option value="@item.Key" selected="@(Model.OperationType == item.Key)">@item.Value</option>
                 }
             </select>
-        </div>
+        </div> *@
         <button class="btn btn-primary">Рассчитать</button>
     </form>
 </div>
+    
+@if (Model.Result != null)
+{
+    <div>
+        <label class="form-label">Результаты:</label>
+        <table class="table table-bordered" style="width: 100%; text-align: center;">
+            <thead>
+                <tr>
+                    <th style="width: 20%;">Параметры</th>
+                    @foreach (var result in Model.Result)
+                    {
+                        <th style="width: @(80 / Model.Result.Count())%;">@result.Y_coordinate м</th>
+                    }
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Температура материала, °C</td>
+                    @foreach (var result in Model.Result)
+                    {
+                        <td>@result.TempMaterial</td>
+                    }
+                </tr>
+                <tr>
+                    <td>Температура газа, °C</td>
+                    @foreach (var result in Model.Result)
+                    {
+                        <td>@result.TempGas</td>
+                    }
+                </tr>
+                <tr>
+                    <td>Разность температур, °C</td>
+                    @foreach (var result in Model.Result)
+                    {
+                        <td>@result.TempDiff</td>
+                    }
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    @*     <div class="text-start" mb-3>
+        <b>Высота слоя, м</b> @Model.Height<br />
+        <b>Диаметр окатышей, м</b>: @Model.Diameter_of_pellets<br />
+        <b>Начальная температура окатышей, °С</b> @Model.Temp_pellets<br />
+        <b>Начальная температура воздуха, °С</b> @Model.Temp_air<br />
+        <b>Скорость воздуха на свободное сечение шахты, м/с</b> @Model.Speed_air<br />
+        <b>Средняя теплоемкость воздуха при 200 °С, кДж/(кг • К)</b> @Model.Avg_heat_capacity<br />
+        <b>Расход окатышей, кг/с</b> @Model.Consumption_of_pellets<br />
+        <b>Теплоемкость окатышей, кДж/(кг • К)</b> @Model.Heat_capacity_of_pellets<br />
+        <b>Диаметр аппарата, м</b> @Model.Diameter<br />
+        <b>Объемный коэффициент теплоотдачи, Вт/(м3 • К)</b> @Model.Volumetric_heat_transfer_coefficient<br />
+
+        <b>Результат расчета:</b> @Model.Result
+    </div> *@
+}

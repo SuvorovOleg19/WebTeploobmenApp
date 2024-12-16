@@ -2,7 +2,7 @@
   "Files": [
     {
       "Id": "C:\\Users\\79536\\source\\repos\\WebTeploobmenApp_Suv\\WebTeploobmenApp_Suv\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\WebTeploobmenApp_Suv.bundle.scp.css",
-      "PackagePath": "staticwebassets\\WebTeploobmenApp_Suv.bundle.scp.css"
+      "PackagePath": "staticwebassets\\WebTeploobmenApp_Suv.m1wbvume5n.bundle.scp.css"
     },
     {
       "Id": "C:\\Users\\79536\\source\\repos\\WebTeploobmenApp_Suv\\WebTeploobmenApp_Suv\\wwwroot\\css\\site.css",
@@ -243,6 +243,10 @@
     {
       "Id": "C:\\Users\\79536\\source\\repos\\WebTeploobmenApp_Suv\\WebTeploobmenApp_Suv\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.WebTeploobmenApp_Suv.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.WebTeploobmenApp_Suv.Microsoft.AspNetCore.StaticWebAssets.props",
