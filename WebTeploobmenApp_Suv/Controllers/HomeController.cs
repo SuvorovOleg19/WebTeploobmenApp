@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using System.Security.Claims;
 using System.Security.Cryptography.Xml;
 using WebTeploobmenApp_Suv.Data;
 using WebTeploobmenApp_Suv.Models;
@@ -20,7 +21,9 @@ namespace WebTeploobmenApp_Suv.Controllers
 
         public IActionResult Index()
         {
-            var variants = _context.Variants.ToList();
+            var variants = _context.Variants
+                .Where(x => x.UserId == null || x.UserId == GetUserId())
+                .ToList();
 
 
             return View(variants);
@@ -29,7 +32,7 @@ namespace WebTeploobmenApp_Suv.Controllers
         [HttpGet]
         public IActionResult Delete(int id)
         {
-            var variant = _context.Variants.FirstOrDefault(x => x.Id == id);
+            var variant = _context.Variants.FirstOrDefault(x => x.Id == id && (x.UserId == GetUserId() || x.UserId == null));
             if(variant != null)
             {
                 _context.Variants.Remove(variant);
@@ -43,7 +46,7 @@ namespace WebTeploobmenApp_Suv.Controllers
         [HttpGet]
         public IActionResult Calc(int id)
         {
-            var variant = _context.Variants.FirstOrDefault(x => x.Id == id);
+            var variant = _context.Variants.FirstOrDefault(x => x.Id == id && (x.UserId == GetUserId() || x.UserId == null));
             var viewModel = new HomeCalcViewModel();
 
             if (variant != null)
@@ -99,11 +102,13 @@ namespace WebTeploobmenApp_Suv.Controllers
 
                 //OperationType = model.OperationType
             };
+;
 
             _context.Variants.Add(new Variant
             {
 
                 //Result = result,
+                UserId = GetUserId(),
                 Height = model.Height,
                 Diameter_of_pellets = model.Diameter_of_pellets,
                 Temp_pellets = model.Temp_pellets,
@@ -123,6 +128,15 @@ namespace WebTeploobmenApp_Suv.Controllers
 
             return View(viewModel);
         }
+
+        private int? GetUserId()
+        {
+            var userIdStr = User.FindFirst("UserId")?.Value;
+            int? userId = userIdStr == null ? null : int.Parse(userIdStr);
+
+            return userId;
+        }
+
         public IActionResult Privacy()
         {
             return View();

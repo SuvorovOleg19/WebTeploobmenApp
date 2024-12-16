@@ -6,6 +6,7 @@ namespace WebTeploobmenApp_Suv.Data
     {
         [Key]
         public int Id { get; set; }
+        public int? UserId { get; set; }
 
         public double Height { get; set; }
         public double Diameter_of_pellets { get; set; }
