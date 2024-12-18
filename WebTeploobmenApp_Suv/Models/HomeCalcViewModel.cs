@@ -18,8 +18,8 @@ namespace WebTeploobmenApp_Suv.Models
         public double? Diameter { get; set; }
         public double? Volumetric_heat_transfer_coefficient { get; set; }
 
-        public List<double> TempMaterial { get; set; } = [ 260, 200, 150, 120, 100 ];
-        public List<double> TempGas { get; set; } = [ 100, 120, 150, 190, 250 ];
+        //public List<double> TempMaterial { get; set; } 
+        //public List<double> TempGas { get; set; }
 
     }
 }

@@ -1,81 +1,97 @@
 ﻿@model HomeCalcViewModel
+
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Расчет"; // Устанавливаем заголовок страницы
 }
 
-
 <div class="text-start">
+    <!-- Форма для ввода данных -->
     <form action="/home/calc" method="post">
+        <!-- Поле для ввода высоты слоя -->
         <div class="mb-3">
             <label for="height" class="form-label">Высота слоя, м</label>
             <input type="text" name="model.height" class="form-control" id="height" value="@Model.Height">
         </div>
+
+        <!-- Поле для ввода диаметра окатышей -->
         <div class="mb-3">
             <label for="diameter_of_pellets" class="form-label">Диаметр окатышей, м</label>
             <input type="text" name="model.diameter_of_pellets" class="form-control" id="diameter_of_pellets" value="@Model.Diameter_of_pellets">
         </div>
+
+        <!-- Поле для ввода начальной температуры окатышей -->
         <div class="mb-3">
             <label for="temp_pellets" class="form-label">Начальная температура окатышей, °С</label>
             <input type="text" name="model.temp_pellets" class="form-control" id="temp_pellets" value="@Model.Temp_pellets">
         </div>
+
+        <!-- Поле для ввода начальной температуры воздуха -->
         <div class="mb-3">
             <label for="temp_air" class="form-label">Начальная температура воздуха, °С</label>
             <input type="text" name="model.temp_air" class="form-control" id="temp_air" value="@Model.Temp_air">
         </div>
+
+        <!-- Поле для ввода скорости воздуха -->
         <div class="mb-3">
             <label for="speed_air" class="form-label">Скорость воздуха на свободное сечение шахты, м/с</label>
             <input type="text" name="model.speed_air" class="form-control" id="speed_air" value="@Model.Speed_air">
         </div>
+
+        <!-- Поле для ввода средней теплоемкости воздуха -->
         <div class="mb-3">
             <label for="avg_heat_capacity" class="form-label">Средняя теплоемкость воздуха при 200 °С, кДж/(кг • К)</label>
             <input type="text" name="model.avg_heat_capacity" class="form-control" id="avg_heat_capacity" value="@Model.Avg_heat_capacity">
         </div>
-                <div class="mb-3">
+
+        <!-- Поле для ввода расхода окатышей -->
+        <div class="mb-3">
             <label for="consumption_of_pellets" class="form-label">Расход окатышей, кг/с</label>
             <input type="text" name="model.Consumption_of_pellets" class="form-control" id="Consumption_of_pellets" value="@Model.Consumption_of_pellets">
         </div>
+
+        <!-- Поле для ввода теплоемкости окатышей -->
         <div class="mb-3">
             <label for="heat_capacity_of_pellets" class="form-label">Теплоемкость окатышей, кДж/(кг • К)</label>
             <input type="text" name="model.Heat_capacity_of_pellets" class="form-control" id="Heat_capacity_of_pellets" value="@Model.Heat_capacity_of_pellets">
         </div>
+
+        <!-- Поле для ввода диаметра аппарата -->
         <div class="mb-3">
             <label for="diameter" class="form-label">Диаметр аппарата, м</label>
             <input type="text" name="model.diameter" class="form-control" id="diameter" value="@Model.Diameter">
         </div>
+
+        <!-- Поле для ввода объемного коэффициента теплоотдачи -->
         <div class="mb-3">
             <label for="volumetric_heat_transfer_coefficient" class="form-label">Объемный коэффициент теплоотдачи, Вт/(м3 • К)</label>
             <input type="text" name="model.volumetric_heat_transfer_coefficient" class="form-control" id="volumetric_heat_transfer_coefficient" value="@Model.Volumetric_heat_transfer_coefficient">
         </div>
 
-
-@*         <div class="mb-3">
-            <label class="form-label">Тип операции</label>
-            <select name="model.operationType" class="form-control">
-                @foreach (var item in HomeCalcViewModel.OperationTypes)
-                {
-                    <option value="@item.Key" selected="@(Model.OperationType == item.Key)">@item.Value</option>
-                }
-            </select>
-        </div> *@
-        <button class="btn btn-primary">Рассчитать</button>
+        <!-- Кнопки действий: "Расчитать" и "Записать" -->
+        <div class="text-center mt-4">
+            <button class="btn btn-primary" name="action" value="show">Рассчитать</button>
+            <button class="btn btn-primary" name="action" value="add">Записать</button>
+        </div>
     </form>
 </div>
-    
+
 @if (Model.Result != null)
 {
+    <!-- Отображение результатов, если они есть -->
     <div>
-        <label class="form-label">Результаты:</label>
+        <h3>Результаты:</h3>
         <table class="table table-bordered" style="width: 100%; text-align: center;">
             <thead>
                 <tr>
-                    <th style="width: 20%;">Параметры</th>
+                    <th style="width: 20%;">Высота слоя, м</th>
                     @foreach (var result in Model.Result)
                     {
-                        <th style="width: @(80 / Model.Result.Count())%;">@result.Y_coordinate м</th>
+                        <th style="width: @(80 / Model.Result.Count())%;">@result.Y_coordinate</th>
                     }
                 </tr>
             </thead>
             <tbody>
+                <!-- Температура материала -->
                 <tr>
                     <td>Температура материала, °C</td>
                     @foreach (var result in Model.Result)
@@ -83,6 +99,8 @@
                         <td>@result.TempMaterial</td>
                     }
                 </tr>
+
+                <!-- Температура газа -->
                 <tr>
                     <td>Температура газа, °C</td>
                     @foreach (var result in Model.Result)
@@ -90,6 +108,8 @@
                         <td>@result.TempGas</td>
                     }
                 </tr>
+
+                <!-- Разность температур -->
                 <tr>
                     <td>Разность температур, °C</td>
                     @foreach (var result in Model.Result)
@@ -100,27 +120,66 @@
             </tbody>
         </table>
 
-            <div id="chart"></div>
-            <script>
-                    var tempMaterial = @Json.Serialize(Model.TempMaterial);
-                    var tempGas = @Json.Serialize(Model.TempGas);
+        <!-- Отображение графиков -->
+        <div id="charts" class="mt-4">
+            <h3>Графики:</h3>
+            <div class="row">
+                <!-- График изменения температуры материала и газа -->
+                <div class="col-md-6">
+                    <canvas id="temp_change_of_material_and_gas_to_height_of_layer"></canvas>
+                </div>
 
-                    tempMaterial.unshift('Температура материала, °C')
-                    tempGas.unshift('Температура газа, °C')
+                <!-- График разности температур -->
+                <div class="col-md-6">
+                    <canvas id="temp_diff_between_pellets_and_gas"></canvas>
+                </div>
+            </div>
+        </div>
 
-                    var chart = c3.generate({
-                    bindto: '#chart',
-                    data: {
-                      columns: [
-                  tempMaterial,
-              tempGas
-                      ]
-                    }
-                });
-            </script>
+        <!-- Скрипт для построения графиков -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+            // Получение данных из модели
+            const yCoordinates = @Html.Raw(Json.Serialize(Model.Result.Select(r => r.Y_coordinate)));
+            const tempGas = @Html.Raw(Json.Serialize(Model.Result.Select(r => r.TempGas)));
+            const tempMaterial = @Html.Raw(Json.Serialize(Model.Result.Select(r => r.TempMaterial)));
+            const tempDiff = @Html.Raw(Json.Serialize(Model.Result.Select(r => r.TempDiff)));
 
+            // Построение первого графика
+            new Chart(document.getElementById('temp_change_of_material_and_gas_to_height_of_layer').getContext('2d'), {
+                type: 'line',
+                data: {
+                    labels: yCoordinates,
+                    datasets: [
+                        {
+                            label: 'Температура газа, °C',
+                            data: tempGas,
+                            borderColor: 'rgba(0, 128, 255, 1)',
+                            fill: false,
+                        },
+                        {
+                            label: 'Температура материала, °C',
+                            data: tempMaterial,
+                            borderColor: 'rgba(255, 165, 0, 1)',
+                            fill: false,
+                        }
+                    ]
+                }
+            });
+
+            // Построение второго графика
+            new Chart(document.getElementById('temp_diff_between_pellets_and_gas').getContext('2d'), {
+                type: 'line',
+                data: {
+                    labels: yCoordinates,
+                    datasets: [{
+                        label: 'Разность температур, °C',
+                        data: tempDiff,
+                        borderColor: 'rgba(60, 179, 113, 1)',
+                        fill: false,
+                    }]
+                }
+            });
+        </script>
     </div>
 }
-
-
-
