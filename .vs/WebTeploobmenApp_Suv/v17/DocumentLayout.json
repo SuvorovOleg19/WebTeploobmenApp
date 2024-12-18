@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\79536\\source\\repos\\WebTeploobmenApp_Suv\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{93990897-8E0A-4BF5-A11A-07FCB38250B6}|WebTeploobmenApp_Suv\\WebTeploobmenApp_Suv.csproj|c:\\users\\79536\\source\\repos\\webteploobmenapp_suv\\webteploobmenapp_suv\\views\\home\\calc.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{93990897-8E0A-4BF5-A11A-07FCB38250B6}|WebTeploobmenApp_Suv\\WebTeploobmenApp_Suv.csproj|solutionrelative:webteploobmenapp_suv\\views\\home\\calc.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{93990897-8E0A-4BF5-A11A-07FCB38250B6}|WebTeploobmenApp_Suv\\WebTeploobmenApp_Suv.csproj|c:\\users\\79536\\source\\repos\\webteploobmenapp_suv\\webteploobmenapp_suv\\views\\auth\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{93990897-8E0A-4BF5-A11A-07FCB38250B6}|WebTeploobmenApp_Suv\\WebTeploobmenApp_Suv.csproj|solutionrelative:webteploobmenapp_suv\\views\\auth\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{93990897-8E0A-4BF5-A11A-07FCB38250B6}|WebTeploobmenApp_Suv\\WebTeploobmenApp_Suv.csproj|c:\\users\\79536\\source\\repos\\webteploobmenapp_suv\\webteploobmenapp_suv\\models\\homecalcviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{93990897-8E0A-4BF5-A11A-07FCB38250B6}|WebTeploobmenApp_Suv\\WebTeploobmenApp_Suv.csproj|solutionrelative:webteploobmenapp_suv\\models\\homecalcviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{93990897-8E0A-4BF5-A11A-07FCB38250B6}|WebTeploobmenApp_Suv\\WebTeploobmenApp_Suv.csproj|c:\\users\\79536\\source\\repos\\webteploobmenapp_suv\\webteploobmenapp_suv\\models\\calcmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{93990897-8E0A-4BF5-A11A-07FCB38250B6}|WebTeploobmenApp_Suv\\WebTeploobmenApp_Suv.csproj|solutionrelative:webteploobmenapp_suv\\models\\calcmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{93990897-8E0A-4BF5-A11A-07FCB38250B6}|WebTeploobmenApp_Suv\\WebTeploobmenApp_Suv.csproj|c:\\users\\79536\\source\\repos\\webteploobmenapp_suv\\webteploobmenapp_suv\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -25,10 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{93990897-8E0A-4BF5-A11A-07FCB38250B6}|WebTeploobmenApp_Suv\\WebTeploobmenApp_Suv.csproj|c:\\users\\79536\\source\\repos\\webteploobmenapp_suv\\webteploobmenapp_suv\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{93990897-8E0A-4BF5-A11A-07FCB38250B6}|WebTeploobmenApp_Suv\\WebTeploobmenApp_Suv.csproj|solutionrelative:webteploobmenapp_suv\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{93990897-8E0A-4BF5-A11A-07FCB38250B6}|WebTeploobmenApp_Suv\\WebTeploobmenApp_Suv.csproj|c:\\users\\79536\\source\\repos\\webteploobmenapp_suv\\webteploobmenapp_suv\\views\\home\\calc.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{93990897-8E0A-4BF5-A11A-07FCB38250B6}|WebTeploobmenApp_Suv\\WebTeploobmenApp_Suv.csproj|solutionrelative:webteploobmenapp_suv\\views\\home\\calc.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,6 +54,32 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\79536\\source\\repos\\WebTeploobmenApp_Suv\\WebTeploobmenApp_Suv\\Views\\Auth\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebTeploobmenApp_Suv\\Views\\Auth\\Index.cshtml",
+              "ToolTip": "C:\\Users\\79536\\source\\repos\\WebTeploobmenApp_Suv\\WebTeploobmenApp_Suv\\Views\\Auth\\Index.cshtml",
+              "RelativeToolTip": "WebTeploobmenApp_Suv\\Views\\Auth\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-18T11:12:18.014Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Calc.cshtml",
+              "DocumentMoniker": "C:\\Users\\79536\\source\\repos\\WebTeploobmenApp_Suv\\WebTeploobmenApp_Suv\\Views\\Home\\Calc.cshtml",
+              "RelativeDocumentMoniker": "WebTeploobmenApp_Suv\\Views\\Home\\Calc.cshtml",
+              "ToolTip": "C:\\Users\\79536\\source\\repos\\WebTeploobmenApp_Suv\\WebTeploobmenApp_Suv\\Views\\Home\\Calc.cshtml",
+              "RelativeToolTip": "WebTeploobmenApp_Suv\\Views\\Home\\Calc.cshtml",
+              "ViewState": "AgIAAM8AAAAAAAAAAAAAAN8AAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-18T11:07:15.138Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 4,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\79536\\source\\repos\\WebTeploobmenApp_Suv\\WebTeploobmenApp_Suv\\Controllers\\AuthController.cs",
@@ -66,21 +88,7 @@
               "RelativeToolTip": "WebTeploobmenApp_Suv\\Controllers\\AuthController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T11:12:25.912Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\79536\\source\\repos\\WebTeploobmenApp_Suv\\WebTeploobmenApp_Suv\\Views\\Auth\\Index.cshtml",
-              "RelativeDocumentMoniker": "WebTeploobmenApp_Suv\\Views\\Auth\\Index.cshtml",
-              "ToolTip": "C:\\Users\\79536\\source\\repos\\WebTeploobmenApp_Suv\\WebTeploobmenApp_Suv\\Views\\Auth\\Index.cshtml",
-              "RelativeToolTip": "WebTeploobmenApp_Suv\\Views\\Auth\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-18T11:12:18.014Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-18T11:12:25.912Z"
             },
             {
               "$type": "Document",
@@ -92,12 +100,11 @@
               "RelativeToolTip": "WebTeploobmenApp_Suv\\Views\\Home\\Index.cshtml",
               "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-18T11:12:10.878Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-18T11:12:10.878Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "HomeCalcViewModel.cs",
               "DocumentMoniker": "C:\\Users\\79536\\source\\repos\\WebTeploobmenApp_Suv\\WebTeploobmenApp_Suv\\Models\\HomeCalcViewModel.cs",
               "RelativeDocumentMoniker": "WebTeploobmenApp_Suv\\Models\\HomeCalcViewModel.cs",
@@ -105,8 +112,7 @@
               "RelativeToolTip": "WebTeploobmenApp_Suv\\Models\\HomeCalcViewModel.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAA1wAgAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T11:10:01.809Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-18T11:10:01.809Z"
             },
             {
               "$type": "Document",
@@ -118,34 +124,7 @@
               "RelativeToolTip": "WebTeploobmenApp_Suv\\Controllers\\HomeController.cs",
               "ViewState": "AgIAABkAAAAAAAAAAAAQwDUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T11:09:53.265Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CalcModel.cs",
-              "DocumentMoniker": "C:\\Users\\79536\\source\\repos\\WebTeploobmenApp_Suv\\WebTeploobmenApp_Suv\\Models\\CalcModel.cs",
-              "RelativeDocumentMoniker": "WebTeploobmenApp_Suv\\Models\\CalcModel.cs",
-              "ToolTip": "C:\\Users\\79536\\source\\repos\\WebTeploobmenApp_Suv\\WebTeploobmenApp_Suv\\Models\\CalcModel.cs",
-              "RelativeToolTip": "WebTeploobmenApp_Suv\\Models\\CalcModel.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAzwEIAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T11:08:41.026Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Calc.cshtml",
-              "DocumentMoniker": "C:\\Users\\79536\\source\\repos\\WebTeploobmenApp_Suv\\WebTeploobmenApp_Suv\\Views\\Home\\Calc.cshtml",
-              "RelativeDocumentMoniker": "WebTeploobmenApp_Suv\\Views\\Home\\Calc.cshtml",
-              "ToolTip": "C:\\Users\\79536\\source\\repos\\WebTeploobmenApp_Suv\\WebTeploobmenApp_Suv\\Views\\Home\\Calc.cshtml",
-              "RelativeToolTip": "WebTeploobmenApp_Suv\\Views\\Home\\Calc.cshtml",
-              "ViewState": "AgIAAHsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-18T11:07:15.138Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-18T11:09:53.265Z"
             }
           ]
         }

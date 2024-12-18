@@ -164,6 +164,32 @@
                             fill: false,
                         }
                     ]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            display: true, // Отображение легенды
+                        },
+                        title: {
+                            display: true,
+                            text: 'Изменение температур материала и газа по высоте слоя',
+                        }
+                    },
+                    scales: {
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'Высота слоя, м', // Подпись оси X
+                            }
+                        },
+                        y: {
+                            title: {
+                                display: true,
+                                text: 'Температура, °C', // Подпись оси Y
+                            }
+                        }
+                    }
                 }
             });
 
@@ -178,8 +204,35 @@
                         borderColor: 'rgba(60, 179, 113, 1)',
                         fill: false,
                     }]
-                }
-            });
+                },
+                options: 
+                {
+                            responsive: true,
+                            plugins: {
+                                legend: {
+                                    display: true, // Отображение легенды
+                                },
+                                title: {
+                                    display: true,
+                                    text: 'Изменение разности температур окатышей и газа по высоте слоя',
+                                }
+                            },
+                            scales: {
+                                x: {
+                                    title: {
+                                        display: true,
+                                        text: 'Высота слоя, м', // Подпись оси X
+                                    }
+                                },
+                                y: {
+                                    title: {
+                                        display: true,
+                                        text: 'Температура, °C', // Подпись оси Y
+                                    }
+                                }
+                            }
+                        }
+                });
         </script>
     </div>
 }
